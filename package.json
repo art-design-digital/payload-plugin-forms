@@ -1,6 +1,6 @@
 {
   "name": "@art-design-digital/payload-plugin-forms",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "homepage:": "",
   "repository": "git@github.com:art-design-digital/payload-plugin-forms.git",
   "description": "A Payload plugin for forms. This plugin adds a global collection of forms to your Payload instance. You can create and manage forms in the admin interface, and use them as needed in the backend or frontend.",
