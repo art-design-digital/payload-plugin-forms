@@ -50,8 +50,5 @@
     "LICENSE",
     "README.md",
     "package.json"
-  ],
-  "dependencies": {
-    "styled-components": "^6.1.8"
-  }
+  ]
 }
