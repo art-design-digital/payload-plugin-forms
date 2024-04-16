@@ -36,24 +36,6 @@ export type Locale =
   | 'cs'
   | 'tr'
 
-export type Translations = {
-  fields: {
-    feedbackGroup: {
-      fields: {
-        submitLabel: {
-          defaultValue: Record<Locale, string>
-        }
-        successMessage: {
-          defaultValue: Record<Locale, string>
-        }
-        errorMessage: {
-          defaultValue: Record<Locale, string>
-        }
-      }
-    }
-  }
-}
-
 export type Widths = {
   full: string
   half: string
