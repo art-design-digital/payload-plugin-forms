@@ -119,6 +119,7 @@ const Forms: CollectionConfig = {
                   required: true,
                   defaultValue: ({ locale }: { locale: Locale }) =>
                     `${translations.fields.generalTab.fields.feedbackGroup.fields.submitLabel.defaultValue[locale]}`,
+                  localized: true,
                 },
                 {
                   type: 'text',
@@ -128,6 +129,7 @@ const Forms: CollectionConfig = {
                   required: true,
                   defaultValue: ({ locale }: { locale: Locale }) =>
                     `${translations.fields.generalTab.fields.feedbackGroup.fields.successMessage.defaultValue[locale]}`,
+                  localized: true,
                 },
                 {
                   type: 'text',
@@ -137,6 +139,7 @@ const Forms: CollectionConfig = {
                   required: true,
                   defaultValue: ({ locale }: { locale: Locale }) =>
                     `${translations.fields.generalTab.fields.feedbackGroup.fields.errorMessage.defaultValue[locale]}`,
+                  localized: true,
                 },
               ],
             },
@@ -165,6 +168,11 @@ const Forms: CollectionConfig = {
                 },
               },
               fields: [
+                {
+                  type: 'checkbox',
+                  name: 'required',
+                  label: translations.fields.formFieldsTab.fields.formFields.fields.required.label,
+                },
                 {
                   type: 'select',
                   name: 'fieldType',
@@ -229,6 +237,36 @@ const Forms: CollectionConfig = {
                   ],
                 },
                 {
+                  type: 'select',
+                  name: 'width',
+                  required: true,
+                  label: translations.fields.formFieldsTab.fields.formFields.fields.width.label,
+                  defaultValue: 'full',
+                  admin: {
+                    description:
+                      translations.fields.formFieldsTab.fields.formFields.fields.width.admin
+                        .description,
+                  },
+                  options: [
+                    {
+                      label: '1/1',
+                      value: 'full',
+                    },
+                    {
+                      label: '1/2',
+                      value: 'half',
+                    },
+                    {
+                      label: '1/4',
+                      value: 'onequarter',
+                    },
+                    {
+                      label: '3/4',
+                      value: 'threequarter',
+                    },
+                  ],
+                },
+                {
                   type: 'row',
                   fields: [
                     {
@@ -241,7 +279,9 @@ const Forms: CollectionConfig = {
                         description:
                           translations.fields.formFieldsTab.fields.formFields.fields.row.label.admin
                             .description,
+                        width: '50%',
                       },
+                      localized: true,
                     },
                     {
                       type: 'text',
@@ -253,6 +293,7 @@ const Forms: CollectionConfig = {
                         description:
                           translations.fields.formFieldsTab.fields.formFields.fields.row.description
                             .admin.description,
+                        width: '50%',
                         condition: (_, siblingData) => {
                           return [
                             'textarea',
@@ -266,6 +307,7 @@ const Forms: CollectionConfig = {
                           ].includes(siblingData.fieldType)
                         },
                       },
+                      localized: true,
                     },
                   ],
                 },
@@ -299,6 +341,7 @@ const Forms: CollectionConfig = {
                           translations.fields.formFieldsTab.fields.formFields.fields.options.fields
                             .value.admin.description,
                       },
+                      localized: true,
                     },
                   ],
                 },
@@ -335,6 +378,7 @@ const Forms: CollectionConfig = {
                           )
                         },
                       },
+                      localized: true,
                     },
                     {
                       type: 'text',
@@ -354,43 +398,9 @@ const Forms: CollectionConfig = {
                           )
                         },
                       },
+                      localized: true,
                     },
                   ],
-                },
-                {
-                  type: 'select',
-                  name: 'width',
-                  required: true,
-                  label: translations.fields.formFieldsTab.fields.formFields.fields.width.label,
-                  defaultValue: 'full',
-                  admin: {
-                    description:
-                      translations.fields.formFieldsTab.fields.formFields.fields.width.admin
-                        .description,
-                  },
-                  options: [
-                    {
-                      label: '1/1',
-                      value: 'full',
-                    },
-                    {
-                      label: '1/2',
-                      value: 'half',
-                    },
-                    {
-                      label: '1/4',
-                      value: 'onequarter',
-                    },
-                    {
-                      label: '3/4',
-                      value: 'threequarter',
-                    },
-                  ],
-                },
-                {
-                  type: 'checkbox',
-                  name: 'required',
-                  label: translations.fields.formFieldsTab.fields.formFields.fields.required.label,
                 },
                 {
                   type: 'row',
