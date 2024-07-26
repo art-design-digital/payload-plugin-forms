@@ -118,7 +118,10 @@ const Forms: CollectionConfig = {
                     translations.fields.generalTab.fields.feedbackGroup.fields.submitLabel.label,
                   required: true,
                   defaultValue: ({ locale }: { locale: Locale }) =>
-                    `${translations.fields.generalTab.fields.feedbackGroup.fields.submitLabel.defaultValue[locale]}`,
+                    `${
+                      translations.fields.generalTab.fields.feedbackGroup.fields.submitLabel
+                        .defaultValue[locale ? locale : 'en']
+                    }`,
                   localized: true,
                 },
                 {
@@ -128,7 +131,10 @@ const Forms: CollectionConfig = {
                     translations.fields.generalTab.fields.feedbackGroup.fields.successMessage.label,
                   required: true,
                   defaultValue: ({ locale }: { locale: Locale }) =>
-                    `${translations.fields.generalTab.fields.feedbackGroup.fields.successMessage.defaultValue[locale]}`,
+                    `${
+                      translations.fields.generalTab.fields.feedbackGroup.fields.successMessage
+                        .defaultValue[locale ? locale : 'en']
+                    }`,
                   localized: true,
                 },
                 {
@@ -138,7 +144,10 @@ const Forms: CollectionConfig = {
                     translations.fields.generalTab.fields.feedbackGroup.fields.errorMessage.label,
                   required: true,
                   defaultValue: ({ locale }: { locale: Locale }) =>
-                    `${translations.fields.generalTab.fields.feedbackGroup.fields.errorMessage.defaultValue[locale]}`,
+                    `${
+                      translations.fields.generalTab.fields.feedbackGroup.fields.errorMessage
+                        .defaultValue[locale ? locale : 'en']
+                    }`,
                   localized: true,
                 },
               ],

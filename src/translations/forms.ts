@@ -413,7 +413,7 @@ export const translations = {
                 tr: 'Başarı mesajı',
               },
               defaultValue: {
-                de: 'Senden war erfolgreich! Vielen Dank für die Verwendung unseres Formularsaaaa.',
+                de: 'Senden war erfolgreich! Vielen Dank für die Verwendung unseres Formulars.',
                 en: 'Submission was successful! Thank you for using our form.',
                 fr: "La soumission a réussi! Merci d'avoir utilisé notre formulaire.",
                 es: '¡El envío fue exitoso! Gracias por usar nuestro formulario.',
