@@ -10,6 +10,7 @@ export const defaultPluginOptions: PluginOptionsTypes = {
    * @default false
    */
   enabled: false,
+  adminGroup: undefined,
 }
 
 export interface PluginOptionsTypes {
@@ -18,6 +19,12 @@ export interface PluginOptionsTypes {
    * @default false
    */
   enabled?: boolean
+
+  /**
+   * Admin group name
+   * @default ''
+   */
+  adminGroup?: string | { [key: string]: string }
 }
 
 export type Locale =

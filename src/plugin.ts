@@ -14,7 +14,7 @@ export const formPlugin =
       return config
     }
 
-    config.collections = [...(config.collections || []), Forms]
+    config.collections = [...(config.collections || []), Forms(pluginOptions)]
 
     return config
   }

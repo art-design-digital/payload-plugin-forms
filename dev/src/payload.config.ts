@@ -37,7 +37,7 @@ export default buildConfig({
   graphQL: {
     schemaOutputFile: path.resolve(__dirname, 'generated-schema.graphql'),
   },
-  plugins: [formPlugin({ enabled: true })],
+  plugins: [formPlugin({ enabled: true, adminGroup: { de: 'Test', en: 'other' } })],
   db: mongooseAdapter({
     url: process.env.DATABASE_URI,
   }),
