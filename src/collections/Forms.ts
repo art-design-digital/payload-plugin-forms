@@ -19,6 +19,7 @@ export const Forms = (userPluginOptions: PluginOptionsTypes) => {
       singular: translations.labels.singular,
       plural: translations.labels.plural,
     },
+    access: pluginOptions?.access || undefined,
     admin: {
       group: pluginOptions?.adminGroup || undefined,
       useAsTitle: 'name',

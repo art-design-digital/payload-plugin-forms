@@ -1,3 +1,5 @@
+import { Access } from 'payload/types'
+
 /**
  * Default options for the plugin
  *
@@ -11,6 +13,7 @@ export const defaultPluginOptions: PluginOptionsTypes = {
    */
   enabled: false,
   adminGroup: undefined,
+  access: undefined,
 }
 
 export interface PluginOptionsTypes {
@@ -25,6 +28,12 @@ export interface PluginOptionsTypes {
    * @default ''
    */
   adminGroup?: string | { [key: string]: string }
+
+  /**
+   * Access control for the forms collection
+   * @default undefined
+   */
+  access?: Partial<Access>
 }
 
 export type Locale =
